@@ -38,3 +38,20 @@ footer {
     background: #020617;
     margin-top: 40px;
 }
+nav{
+    background:#020617;
+    padding:18px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
