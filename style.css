@@ -122,6 +122,13 @@ border-radius:50%;
 object-fit:cover;
 border:6px solid #38bdf8;
 box-shadow:0 0 40px rgba(56,189,248,.35);
+animation:float 4s ease-in-out infinite;
+transition:.4s;
+}
+
+.hero-right img:hover{
+transform:scale(1.05);
+box-shadow:0 0 60px rgba(56,189,248,.7);
 }
 
 /* Buttons */
@@ -244,7 +251,8 @@ section{
 }
 
 .project-card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-12px) scale(1.02);
+    box-shadow:0 15px 35px rgba(56,189,248,.35);
 }
 
 .project-card h3{
@@ -279,10 +287,12 @@ section{
     padding:12px 22px;
     border-radius:30px;
     transition:.3s;
+    font-weight:600;
 }
 
 .project-btn:hover{
     background:#0ea5e9;
+    transform:scale(1.08);
 }
 
 /* ==========================
@@ -595,8 +605,9 @@ box-shadow:0 8px 25px rgba(0,0,0,.3);
 }
 
 .stat-card:hover{
-transform:translateY(-8px);
-border:2px solid #38bdf8;
+    transform:translateY(-10px) scale(1.05);
+    border:2px solid #38bdf8;
+    box-shadow:0 10px 30px rgba(56,189,248,.4);
 }
 
 .stat-card h2{
@@ -625,9 +636,22 @@ font-size:16px;
     color:#d1d5db;
     margin-top:8px;
 }
+
 #typing{
 color:#38bdf8;
 font-weight:700;
 border-right:3px solid #38bdf8;
 padding-right:5px;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-15px);
+}
+100%{
+transform:translateY(0);
+}
 }
