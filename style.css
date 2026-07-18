@@ -470,12 +470,16 @@ padding:15px;
 }
 
 nav ul{
-margin-top:15px;
-flex-wrap:wrap;
+margin-top:10px;
+display:flex;
 justify-content:center;
-gap:15px;
+gap:10px;
+flex-wrap:wrap;
 }
 
+nav ul li a{
+font-size:13px;
+}
 }
 
 @media(max-width:768px){
