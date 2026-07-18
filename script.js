@@ -89,3 +89,11 @@ function typeEffect() {
 }
 
 typeEffect();
+
+window.addEventListener("load", function () {
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 1000);
+});
