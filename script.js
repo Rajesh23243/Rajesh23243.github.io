@@ -53,3 +53,39 @@ if (footer) {
     footer.innerHTML =
         `© ${new Date().getFullYear()} MADIPEDDY RAJESH KUMAR. All Rights Reserved.`;
 }
+const text = [
+    "Aspiring Data Analyst",
+    "AI & Machine Learning Enthusiast",
+    "Python Developer"
+];
+
+let textIndex = 0;
+let charIndex = 0;
+let deleting = false;
+
+const typing = document.getElementById("typing");
+
+function typeEffect() {
+    if (!typing) return;
+
+    const current = text[textIndex];
+
+    if (!deleting) {
+        typing.textContent = current.substring(0, charIndex++);
+        if (charIndex > current.length) {
+            deleting = true;
+            setTimeout(typeEffect, 1500);
+            return;
+        }
+    } else {
+        typing.textContent = current.substring(0, charIndex--);
+        if (charIndex < 0) {
+            deleting = false;
+            textIndex = (textIndex + 1) % text.length;
+        }
+    }
+
+    setTimeout(typeEffect, deleting ? 50 : 100);
+}
+
+typeEffect();
