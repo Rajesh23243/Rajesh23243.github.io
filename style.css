@@ -15,6 +15,7 @@ font-family:'Poppins',sans-serif;
 background:#0b1120;
 color:#ffffff;
 line-height:1.7;
+overflow-x:hidden;
 }
 
 .container{
@@ -50,9 +51,12 @@ box-shadow:0 3px 15px rgba(0,0,0,.3);
 }
 
 .logo{
-font-size:28px;
+font-size:30px;
 font-weight:700;
 color:#38bdf8;
+letter-spacing:2px;
+text-shadow:0 0 12px rgba(56,189,248,.6);
+cursor:pointer;
 }
 
 nav ul{
@@ -68,6 +72,8 @@ transition:.3s;
 
 nav ul li a:hover{
 color:#38bdf8;
+border-bottom:2px solid #38bdf8;
+padding-bottom:5px;
 }
 
 /* Hero */
@@ -79,6 +85,7 @@ align-items:center;
 justify-content:space-between;
 gap:60px;
 min-height:100vh;
+background:linear-gradient(135deg,#0b1120,#111827,#0b1120);
 }
 
 .hero-left{
@@ -149,7 +156,8 @@ transition:.3s;
 
 .btn:hover{
 background:#0ea5e9;
-transform:translateY(-4px);
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 10px 25px rgba(56,189,248,.4);
 }
 
 .btn.secondary{
@@ -175,6 +183,7 @@ section{
     color:#38bdf8;
     margin-bottom:50px;
     position:relative;
+    text-shadow:0 0 15px rgba(56,189,248,.5);
 }
 
 .section-title::after{
@@ -368,9 +377,10 @@ section{
 
 footer{
     background:#020617;
-    padding:35px 20px;
+    padding:40px 20px;
     text-align:center;
     margin-top:60px;
+    border-top:1px solid rgba(56,189,248,.2);
 }
 
 footer p{
@@ -654,4 +664,34 @@ transform:translateY(-15px);
 100%{
 transform:translateY(0);
 }
+}
+.about-card,
+.project-card,
+.certificate-card,
+.contact-card,
+.journey-card,
+.stat-card{
+    border:1px solid rgba(56,189,248,.15);
+}
+
+.about-card:hover,
+.certificate-card:hover,
+.contact-card:hover,
+.journey-card:hover{
+    transform:translateY(-8px);
+    transition:.3s;
+    box-shadow:0 12px 30px rgba(56,189,248,.25);
+}
+
+body{
+    animation:fadeIn .8s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
 }
