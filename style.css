@@ -259,6 +259,14 @@ section{
     box-shadow:0 8px 25px rgba(0,0,0,.35);
 }
 
+.project-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+
 .project-card:hover{
     transform:translateY(-12px) scale(1.02);
     box-shadow:0 15px 35px rgba(56,189,248,.35);
