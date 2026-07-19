@@ -259,6 +259,7 @@ section{
     box-shadow:0 8px 25px rgba(0,0,0,.35);
 }
 
+
 .project-card{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -266,6 +267,15 @@ section{
 .project-card:hover{
     transform: translateY(-8px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+.project-card img{
+    width:100%;
+    height:auto;
+    max-height:250px;
+    object-fit:cover;
+    border-radius:10px;
+    display:block;
+
 }
 
 .project-card:hover{
